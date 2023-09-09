@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uplifter</title>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100&display=swap');
+        :root{
+            --heading:#191919;
+            --text:#212122;
+            --back:#f3f0e6;
+            --green:#74c947;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+font-family: 'Poppins', sans-serif;
+color:#191919 ;
+font-size: 16px;
+font-weight: bold;
+        }
+        body p{
+            color: #212122;
+        }
+    
+        .container{
+            height:100vh;
+            max-width: 1320px;
+            margin:auto;
+        }
+        .nav{
+            width: 100%;
+            height: 90px;
+           border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .flex{
+            display: flex;
+            justify-content: start;
+            gap: 40px;
+            align-items: center;
+        }
+        .flex1{
+            display: flex;
+           
+            gap: 60px;
+            align-items: center;
+        }
+        .links ul li{
+            list-style: none;
+        }
+        .links ul li a{
+            text-decoration: none;
+            color: #191919;
+        }
+        .links{
+            padding: 0 40px;
+        }
+        .main{
+            display: flex;
+            gap: 20px;
+            margin: 20px 10px;
+            height: 600px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+        }
+        .first{
+            width: 50%; 
+        }
+      .first img{
+            height: 550px;
+            border-radius: 50%;
+            position: relative;
+            top: 40px;
+            left: -10px;
+        }
+        .second{
+            padding: 2px 20px;
+            width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+            
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+            color: #191919;
+        }
+        p{
+            color: #212122;
+            font-size: 20px;
+            font-weight: 100;
+            opacity: 80%;
+        }
+        .button{
+            width: 120px;
+            height: 40px;
+            background-color: #74c947;
+           border-radius: 50px;
+           padding: 6px 2px;
+           text-decoration: none;
+        }
+        .button a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .links ul li:hover{
+            transform: translateY(-2px);
+        }
+        .links ul li a:hover{
+            color: #74c947;
+            cursor: pointer;
+        }
+        
+       .button:hover{
+            color: #74c947;
+            cursor: pointer;
+            transform: translateY(-2px);
+        }
+        .flex1 :nth-child(2){
+            width: 120px;
+            height: 40px;
+            background-color: #74c947;
+           border-radius: 50px;
+           color: #ffffff;
+           text-align: center;
+           padding: 6px 1px;
+        }
+        .features{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+            /* background-color: var(--back); */
+        }
+        .contact{
+            display: flex;
+            gap: 20px;
+            margin: 20px 10px;
+            height: 600px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+            /* background-color: var(--back); */
+        }
+        .testimonial{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+            margin: 20px 10px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+            /* background-color: var(--back); */
+            
+        }
+        .image{
+            width: 2px;
+            height: 2px;
+        }
+        .flex{
+            display: flex;
+        }
+        .part1{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .part1 ul{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .part2{
+            width: 50%;
+        }
+        .part2 img{
+            height: 450px;
+            border-radius: 50%;
+            position: relative;
+        }
+        span{
+            font-size: 40px;
+            color: var(--green);
+            font-weight:bolder;
+            opacity: 100% !important;
+        }
+        .developer{
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            
+        }
+        .developer img{
+            width: 350px;
+            
+            border-radius: 50%;
+            border: 1.5px solid var(--green);
+            margin: 8px;
+          
+        }
+        .connect{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 100% !important;
+        }
+        .cbtn{
+            display: flex;
+            gap: 50px;
+            
+        }
+        .skills{
+            display: flex;
+            justify-content: start;
+            gap: 10%;
+            row-gap: 30px;
+            flex-wrap: wrap;
+        }
+        .button1{
+            
+            background-color: white;
+           border-radius: 10px;
+           border:2px solid #74c947;
+           padding: 8px 10px;
+           text-decoration: none;
+           cursor: pointer;
+           
+        }
+        .button1 a{
+            text-decoration: none;
+            color: var(--heading);
+            font-weight: bold;
+        }
+        .button1:hover{
+            background-color: #74c947;
+        }
+        .cards{
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 40%;
+            text-align: left;
+           border-radius: 10px;
+           border:2px solid #74c947;
+           padding: 8px 10px;
+        }
+        .subfooter{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            height: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+            margin: 5px 2px;
+        }
+        .subfooter a{
+           text-decoration: none;
+           color: #191919;
+        }
+        .subfooter a:hover{
+            color: var(--green);
+        }
+
+        @media screen and (min-width:750px) and (max-width:1220px) {
+             
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+        <div class="nav">
+<div class="links">
+    <ul class="flex">
+        <!-- <img src="Assests/1q.png" alt="" width="150px"> -->
+        <img src="Assests/Uplifter.png" alt="" width="150px">
+        <li><a href="#Overview">Overview</a></li>
+        <li><a href="#Features">Features</a></li>
+        <li><a href="#Testimonial">Testimonials</a></li>
+        <li><a href="#Contact">Contact</a></li>
+
+    </ul>
+</div>
+
+<div class="links">
+    <ul class="flex1">
+        <li><a href="#">Login</a></li>
+        <div class="button">
+            <a href="#">Register</a>
+        </div>
+    </ul>
+</div>
+        </div>
+    </nav>
+
+   <section>
+    <div class="main" id="Overview">
+        <div class="first">
+<img src="Assests/1st.png" alt="Image by pngtree.com">
+        </div>
+        <div class="second">
+            <h1>Learn. Explore. & Invent</h1>
+            <p> <span>Uplifter</span> ipsum dolor sit amet consectetur adipisicing elit. Sit impedit officiis rem sunt? Cupiditate tenetur assumenda obcaecati facere fugiat nostrum iste et odit, architecto, accusamus voluptate, laudantium rerum dignissimos delectus.</p>
+            <div class="button">
+                <a href="#">Download</a>
+            </div>
+        </div>
+    </div>
+   </section>
+   <section>
+    <h1 id="Features">Features Of This Platform</h1>
+    <div class="features" >
+<div class="psolving flex">
+    <div class="part1">
+        <h1>Problem-Solving</h1>
+       <ul><li>Basics Concepts</li>
+       <li>Data Structure & Algorithm</li>
+       <li>450+ Industrial FAQ</li>
+       <li>Compitative Programming Concepts</li>
+       </ul>
+    </div>
+    <div class="part2">
+        <img src="Assests/psolving.png" alt="Image by pngtree.com">
+                </div>
+               
+</div>
+<div class="R&A flex">
+    <div class="part2">
+        <img src="Assests/aptitude.png" alt="Image by pngtree.com">
+                </div>
+    <div class="part1">
+        <h1>Reasioning & Aptitude</h1>
+        <ul><li>Most Asked Topics</li>
+            <li>Puzzle Problems</li>
+            <li>300+ Varity Of Questions</li>
+            <li>Arithmatic Reasioning</li>
+            </ul>
+    </div>
+    
+</div>
+
+<div class="CoreSubjects flex">
+    <div class="part1">
+        <h1>Core Subjects</h1>
+        <ul><li>D.B.M.S.</li>
+            <li>Computer Networks</li>
+            <li>Operating System</li>
+            <li>Softwaer Design Concepts</li>
+            <li>400+ MCQ Practice</li>
+            </ul>
+    </div>
+    <div class="part2">
+        <img src="Assests/core.png" alt="Image by pngtree.com">
+                </div>
+</div>
+
+<div class="OOPS flex">
+    <div class="part2">
+        <img src="Assests/OOPs.png" alt="Image by pngtree.com">
+                </div>
+    <div class="part1">
+        <h1>OOPS & C++</h1>
+        <ul><li>C++ Programming</li>
+            <li>Advance Features Of C++</li>
+            <li>OOPs With Coding</li>
+            <li>200+ MCQ</li>
+            </ul>
+    </div>
+   
+</div>
+<div class="WebDev flex">
+    <div class="part1">
+        <h1>Web-Development</h1>
+        <ul><li>Basics Concepts</li>
+            <li>M-E-R-N Stack Development</li>
+            <li>15+ Projects (10 Mini + 5 Major)</li>
+            <li>100+ Interview Questions </li>
+            </ul>
+    </div>
+    <div class="part2">
+        <img src="Assests/webdev.png" alt="Image by pngtree.com">
+                </div>
+   
+   
+</div>
+
+   </section>
+   <section>
+    <div class="testimonial" id="Testimonial">
+        <h1 >Testimonials</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus debitis sit tenetur quidem! Reprehenderit quas odio mollitia recusandae odit earum magnam rem itaque, esse magni praesentium debitis animi illo asperiores.
+        </p>
+        <div class="cards flex">
+            <div class="card">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, aliquam facere dolorum tempore obcaecati tenetur ipsum, minus ea eaque nulla reiciendis odio iusto quasi nihil consequatur repudiandae nisi porro modi.</p>
+<div class="user">
+    <p> <i class="fa-regular fa-user"></i> Name</p>
+    <p>Detail Of Professions In Year Experience</p>
+</div>
+            </div>
+            <div class="card">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, aliquam facere dolorum tempore obcaecati tenetur ipsum, minus ea eaque nulla reiciendis odio iusto quasi nihil consequatur repudiandae nisi porro modi.</p>
+                <div class="user">
+                    <p> <i class="fa-regular fa-user"></i> Name</p>
+                    <p>Detail Of Professions In Year Experience</p>
+                </div>
+                            </div>
+                            <div class="card">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, aliquam facere dolorum tempore obcaecati tenetur ipsum, minus ea eaque nulla reiciendis odio iusto quasi nihil consequatur repudiandae nisi porro modi.</p>
+                                <div class="user">
+                                    <p> <i class="fa-regular fa-user"></i>  Name</p>
+                                    <p>Detail Of Professions In Year Experience</p>
+                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, aliquam facere dolorum tempore obcaecati tenetur ipsum, minus ea eaque nulla reiciendis odio iusto quasi nihil consequatur repudiandae nisi porro modi.</p>
+                                                <div class="user">
+                                                    <p> <i class="fa-regular fa-user"></i> Name</p>
+                                                    <p>Detail Of Professions In Year Experience</p>
+                                                </div>
+                                                            </div>
+                                                        </div>                     
+
+   </section>
+   <section>
+    <div class="contact" id="Contact">
+<div class="developer">
+    <img src="Assests/bannerImg.png" alt="" srcset="">
+    <div class="cbtn">
+    <p class="button connect">
+    <a href="#" >Contact Me</a>
+    </p>
+    <p class="button connect email">
+        <a href="#" >Email Me</a>
+        </p>
+    </div>
+</div>
+<div class="second">
+    <h1>It's About Me</h1>
+    <p> <span>Yashraj Jain</span> ipsum dolor sit amet consectetur adipisicing elit. Sit impedit officiis rem sunt? Cupiditate tenetur assumenda obcaecati facere fugiat nostrum iste et odit, architecto, accusamus voluptate, laudantium rerum dignissimos delectus.</p>
+    <div class="skills">
+    <div class="button1">
+        <a href="#">Problem Solving</a>
+    </div>
+    <div class="button1">
+        <a href="#">WebDev</a>
+    </div>
+    <div class="button1">
+        <a href="#">UX/UI</a>
+    </div>
+    <div class="button1">
+        <a href="#">Algorithm</a>
+    </div>
+    <div class="button1">
+        <a href="#">Data Structure</a>
+    </div>
+    <div class="button1">
+        <a href="#">C++ Lang.</a>
+    </div>
+    <div class="button1">
+        <a href="#">Aptitude/Reasioning</a>
+    </div>
+    <div class="button1">
+        <a href="#">CS Fundamentals</a>
+    </div>
+    <div class="button1">
+        <a href="#">Competative Programming</a>
+    </div>
+
+</div>
+</div>
+    </div>
+   </section>
+   <footer>
+   <div class="subfooter">
+        <a href="#" class="hover-lins">Privacy Policy</a>
+        <a href="#" class="hover-lins">Terms & Conditions</a>
+        <a href="#" class="hover-lins">Security</a>
+        <a href="https://github.com/107-yashraj" class="hover-lins"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a href="https://www.linkedin.com/in/yashraj-jain-9922a4222/" class="hover-lins"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a href="https://www.instagram.com/v_o_i_d_3.0/" class="hover-lins"><i class="fa-brands fa-instagram fa-xl"></i></a>
+    </div>
+</footer>
+
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/e44ab2ef2b.js" crossorigin="anonymous"></script>  
+    <!-- <a href="https://storyset.com/technology">Technology illustrations by Storyset</a> -->
+</body>
+</html>
